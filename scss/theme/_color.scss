@@ -1,0 +1,59 @@
+
+.has-black-text{
+    & > *{
+        color: $primary-color;
+    }
+}
+.has-white-text{
+    & > *{
+        color: $primary-color;
+    } 
+    @include media(tablet-portrait) {
+        & > *:nth-child(2){
+            color: $inverted-color;
+        }
+    }
+}
+.has-black-white-text{
+    .block-container{
+        & > *:first-child{
+            color: $primary-color;
+        }
+        @include media(tablet-portrait) {
+            & > *:nth-child(2){
+                color: $inverted-color;
+            }
+        }
+    }
+}
+.has-blue-black-text{
+    .block-container{
+        & > *:first-child{
+            color: $secondary-color;
+        }
+        & > *:nth-child(2){
+            color: $primary-color;
+        }
+    }
+}
+.has-blue-white-text{
+    .block-container{
+        & > *:first-child{
+            color: $secondary-color;
+        }
+        @include media(tablet-portrait) {
+            & > *:nth-child(2){
+                color: $inverted-color;
+            }
+        }
+    }
+}
+
+//gutenberg color
+
+.has-dcolor-color{
+    color:$secondary-color;
+}
+.has-white-color{
+    color:$inverted-color;
+}

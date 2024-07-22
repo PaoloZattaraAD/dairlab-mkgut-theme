@@ -1,0 +1,24 @@
+{
+    "name": "acf/imageover",
+    "title": "Full Image Text Cover",
+    "description": "Full Image Text",
+    "style": [ "file:./fullimgtext.css" ],
+    "category": "design",
+    "icon": "admin-comments",
+    "keywords": ["cat", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "fullimgtext.php"
+    },
+    "supports": {
+        "color": {
+            "text": true,
+            "link": true,
+            "background": true
+        },
+        "background": {
+            "backgroundImage": true,
+            "backgroundSize": true 
+        }
+    }
+}

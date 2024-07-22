@@ -1,0 +1,52 @@
+main{
+    h1,
+    p{
+        text-align: center;
+        @include media(tablet-portrait) {
+            text-align: unset;
+        }
+    }
+    .has-text-align-right{
+        @include media(tablet-portrait) {
+            text-align: right;
+        }
+    }
+    p{
+
+        &.has-text-align-right{
+            @include media(tablet-portrait) {
+                margin-right: 0 !important;
+                margin-left:auto!important;
+            }
+        }  
+    }
+    .has-text-align-center{
+        text-align: center;
+    }
+}
+.alignwide{
+    width: 100%;
+    max-width: 1440px;
+    padding: 1.6rem;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    @include media(tablet-portrait) {
+    padding: 3.2rem 6.4rem;
+    }
+    @include media(tablet) {
+        padding: 3.2rem 9.6rem;
+    }
+    @include media(desktop-large) {
+        padding: 3.2rem;
+    }
+    p{
+        max-width: 960px;
+        margin: auto auto;
+    }
+}
+.max-width-620{
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+}

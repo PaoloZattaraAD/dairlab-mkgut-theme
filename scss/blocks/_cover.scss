@@ -1,0 +1,59 @@
+.wp-block-cover{
+    position: relative;
+    &.d-cover{
+        img{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            max-width: none;
+            max-height: none;
+            -o-object-fit: cover;
+            object-fit: cover;
+            outline: none;
+            border: none;
+            box-shadow: none;
+            @include media(tablet-portrait ) {
+                position: relative;
+                height: auto;
+                -o-object-fit: unset;
+                object-fit: unset;
+            }
+        } 
+        .wp-block-cover__inner-container{
+            position: relative;
+            @include media(tablet-portrait ) {
+                position: absolute;
+            }
+            top: 0;
+            width: 100%;
+            left: 0;
+            padding: 5rem;
+            box-sizing: border-box;
+            height: 100%;
+            display: grid;
+            align-content: space-between;
+            text-align: center;
+            h2{
+                padding-top:4rem;
+            }
+            @include media(tablet-portrait) {
+                text-align: unset;
+                padding: 7rem 10rem;
+            }
+            @include media(tablet) {
+                text-align: unset;
+                padding: 7rem 14rem;
+            }
+            @include media(desktop-large) {
+                padding: 7rem;
+            }
+        }
+    }
+}

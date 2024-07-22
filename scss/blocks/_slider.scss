@@ -1,0 +1,38 @@
+.news-carousel,.mk_slider_carousel_wide{
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 8rem;
+    padding:0 8%;
+}
+.splide{
+    .splide__arrows{
+        //display: none;
+        @include media(tablet-portrait) {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            display: block;
+            left: 0;
+        }
+    }
+    .splide__arrow {
+        background: transparent;
+        svg{
+            background: transparent;
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+    .splide__arrow--prev {
+        left: calc(4% - 2rem);
+        svg{
+            //transform: scale(-3.0);
+        }
+    }
+    .splide__arrow--next {
+        right: calc(4% - 2rem);
+        svg{
+           // transform: scale(3.0);
+        }
+    }
+}

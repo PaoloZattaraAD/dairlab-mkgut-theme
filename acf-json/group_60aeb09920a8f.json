@@ -1,0 +1,45 @@
+{
+    "key": "group_60aeb09920a8f",
+    "title": "Title Over Image",
+    "fields": [
+        {
+            "key": "field_60aeb0b122c35",
+            "label": "Testo",
+            "name": "mk_image_over_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 50
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1712649907,
+    "local_file": "\/var\/www\/vhosts\/dairlab.com\/httpdocs\/wp-content\/themes\/mkgut\/acf-json\/group_60aeb09920a8f.json",
+    "acfml_field_group_mode": "advanced"
+}

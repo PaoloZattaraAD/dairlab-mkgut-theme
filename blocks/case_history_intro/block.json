@@ -1,0 +1,24 @@
+{
+    "name": "acf/casehistory",
+    "title": "Case History Intro Full",
+    "description": "Intro Full Slider",
+    "style": [ "file:./introfull.css" ],
+    "category": "design",
+    "icon": "admin-comments",
+    "keywords": ["intro", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "intro.php"
+    },
+    "supports": {
+        "color": {
+            "text": true,
+            "link": true,
+            "background": true
+        },
+        "background": {
+            "backgroundImage": true,
+            "backgroundSize": true 
+        }
+    }
+}

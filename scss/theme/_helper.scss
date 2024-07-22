@@ -1,0 +1,19 @@
+.hide-xs{
+    display: block;
+    padding-top:2rem !important;
+    @include media(tablet-portrait ) {
+        display: none;
+    }
+}
+.hide-mobile{
+    display: none;
+    @include media(tablet-portrait ) {
+        display: block;
+    }
+}
+.wp-block-embed__wrapper{
+    iframe{
+        width: 100%;
+        min-height: 560px;
+    }
+}

@@ -1,0 +1,42 @@
+body {
+    padding-top: 63px;
+    @include media(tablet) {
+        padding-top: 93px; 
+    }
+}
+
+#masthead {
+    height: auto;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: top 0.2s ease-in-out;
+    width: 100%;
+    z-index: 9999;
+    &.nav-up {
+            top: -63px;
+        @include media(tablet) {
+            top: -93px; 
+        }
+    }
+}
+#logged{
+    #masthead {
+        height: auto;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: top 0.2s ease-in-out;
+        width: 100%;
+        z-index: 9999;
+        top: 32px;
+        &.nav-up {
+                top: -94px;
+            @include media(laptop) {
+                top: -126px; 
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+.wp-block-columns{
+    &.mobile-reverse{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        @include media(tablet-portrait) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            flex-wrap: unset;
+            flex-direction: unset;
+        }
+    }
+    @include media(tablet-portrait) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        flex-wrap: unset;
+        flex-direction: unset;
+    }
+    &.col-3{
+        p{
+            max-width: 620px;
+        }
+        @include media(tablet-portrait) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .has-text{
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+        }
+        .evidence{
+            text-align: center;
+            @include media(tablet-portrait) {
+                padding: 2rem;
+                text-align: right;
+            }
+            p{
+                margin:0;
+            }
+            h1{
+                font-size: 7.8rem;
+                margin-bottom: 3rem;
+                @include media(laptop) {
+                    font-size: 10rem;
+                }
+                @include media(desktop-xlarge) {
+                    font-size: 12rem;
+                }
+            }
+        }
+    }
+    .wp-block-column{
+        width: 100%;
+        flex-basis: 100%;
+        padding: 0rem 1.6rem;
+        @include media(tablet-portrait) {
+            padding:0;
+        }
+        &.has-text{
+            h1{
+                margin-bottom: 3rem;
+                margin-top:3rem;
+            }
+            p{
+                margin-bottom: 1.6rem;
+                max-width: 620px;
+                text-align: justify;
+            }
+            padding-bottom: 2rem;
+            @include media(tablet-portrait) {
+                display: grid;
+                align-content: space-between;
+                text-align: unset;
+                padding: 3rem 4rem;
+                h1{
+                    margin-bottom: 0;
+                    margin-top:0;
+                }
+                p{
+                    margin-bottom: 0;
+                }
+            }
+            @include media(tablet) {
+                padding:3.8rem 6rem;
+            }
+            @include media(laptop) {
+                padding:4.2rem 8rem;
+            }
+            @include media(desktop-large) {
+                padding:6rem 12rem;
+            }
+            @include media(desktop-xlarge) {
+                padding:8.4rem 16.8rem;
+            }
+        }
+        &.has-text > *{
+            padding: 0;
+            margin: 0;
+        }
+    }
+}

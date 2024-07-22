@@ -1,0 +1,47 @@
+
+@font-face {
+    font-family:"DKLemonYellowSun";
+    src:url("dksun.woff2") format("woff2"),url("dksun.woff") format("woff"),url("dksun.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+
+
+ .splide__slide.natale_slide .block-container h1,
+ .splide__slide.natale_slide .block-container h2{
+    font-family:"DKLemonYellowSun";
+    text-align: center;
+    color:red;
+}
+
+ .splide__slide.natale_slide .block-container {
+    display: inline-grid;
+    align-items: center;
+    justify-content: center;
+    /* width: 100%; */
+    align-content: space-evenly;
+    /* padding-bottom: 0; */
+    right: 0px;
+}
+ .splide__slide.natale_slide .jumbo .image_block img{
+    object-position: 30%;
+}
+@media only screen and (min-width: 768px){
+    .splide__slide.natale_slide .block-container h2{
+        color:white;
+    }
+    .splide__slide.natale_slide .block-container h1{
+        margin-bottom: 0%;
+        color:white;
+    }
+    
+     .splide__slide.natale_slide .block-container .red{
+        color:#E73C17;
+    }
+
+     .splide__slide.natale_slide .jumbo .image_block img{
+        object-position: auto;
+    }
+     .splide__slide.natale_slide .block-container{
+        right: 70px;
+    }
+}

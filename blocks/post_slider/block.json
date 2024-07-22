@@ -1,0 +1,24 @@
+{
+    "name": "acf/postslider",
+    "title": "Post Slider",
+    "description": "Post Slider",
+    "style": [ "file:./postslider.css" ],
+    "category": "design",
+    "icon": "admin-comments",
+    "keywords": ["cat", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "loop.php"
+    },
+    "supports": {
+        "color": {
+            "text": true,
+            "link": true,
+            "background": true
+        },
+        "background": {
+            "backgroundImage": true,
+            "backgroundSize": true 
+        }
+    }
+}

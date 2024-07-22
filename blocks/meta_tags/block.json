@@ -1,0 +1,24 @@
+{
+    "name": "acf/metatag",
+    "title": "Post Meta",
+    "description": "Post cat & date",
+    "style": [ "file:./meta.css" ],
+    "category": "design",
+    "icon": "admin-comments",
+    "keywords": ["cat", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "cat.php"
+    },
+    "supports": {
+        "color": {
+            "text": true,
+            "link": true,
+            "background": true
+        },
+        "background": {
+            "backgroundImage": true,
+            "backgroundSize": true 
+        }
+    }
+}

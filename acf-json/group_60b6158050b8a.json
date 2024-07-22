@@ -1,0 +1,73 @@
+{
+    "key": "group_60b6158050b8a",
+    "title": "Preview Articolo",
+    "fields": [
+        {
+            "key": "field_60b6158a530ab",
+            "label": "Preview Articolo",
+            "name": "preview_articolo",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "post"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "id"
+        },
+        {
+            "key": "field_6232e0469a652",
+            "label": "Slide",
+            "name": "mk_tipologia_preview_news",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/getarticle"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1712649907,
+    "local_file": "\/var\/www\/vhosts\/dairlab.com\/httpdocs\/wp-content\/themes\/mkgut\/acf-json\/group_60b6158050b8a.json",
+    "acfml_field_group_mode": "advanced"
+}

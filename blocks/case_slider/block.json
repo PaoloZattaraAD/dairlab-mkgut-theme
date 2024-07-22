@@ -1,0 +1,24 @@
+{
+    "name": "acf/caseslider",
+    "title": "Case Slider",
+    "description": "Case Slider",
+    "style": [ "file:./slidercase.css" ],
+    "category": "design",
+    "icon": "admin-comments",
+    "keywords": ["cat", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "caseloop.php"
+    },
+    "supports": {
+        "color": {
+            "text": true,
+            "link": true,
+            "background": true
+        },
+        "background": {
+            "backgroundImage": true,
+            "backgroundSize": true 
+        }
+    }
+}

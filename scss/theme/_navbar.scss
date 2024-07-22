@@ -1,0 +1,196 @@
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .site-branding-container{
+        margin: 1.6rem;
+        width: 100px;
+    }
+    .button-menu-wrapper-toogle{
+        cursor: pointer;
+        position: absolute;
+        top:0;
+        right: 0;
+        z-index: 9999;
+        margin: 1.6rem;
+        width: 40px;
+        display: block;
+        .navbar-toggler{
+            cursor: pointer;
+            border:0;
+            width: 100%;
+            background-color: transparent;
+            display: block;
+            span{
+                display: block;
+                margin: 4px 0;
+                height: 2px;
+                width: 100%;
+                //border: 1px solid $primary-color;
+                background-color: $primary-color;
+            }
+            &:hover{
+                span{
+                    border: 1px solid $secondary-color;
+                }
+            }
+        }
+        @include media(tablet) {
+            display: none;
+        }
+    }
+    .main-menu{
+        display: none;
+        width: 100%;
+        background-color: $primary-color;
+        &.open{
+            display: block;
+            a{
+                font-size: 1.6rem;
+            }
+        }
+        @include media(tablet) {
+            display: block;
+        }
+        a{
+            font-family: dinmedium,sans-serif;
+        }
+        a:hover,a:focus, a:active{
+            color:$secondary-color;
+        }
+        &.menu-1{
+            padding-top:3rem;
+            text-transform: uppercase;
+            li:last-child a{
+                position: relative;
+            }
+            li:last-child a:after{
+                content: url(./assets/images/cart.svg);
+                position: absolute;
+                height: 1em;
+                width: 1em;
+                right: -2em;
+                z-index: 999;
+            }
+            @include media(tablet) {
+                order: 3;
+                width: calc(100% - 132px);
+            }
+        }
+        &.menu-2{
+            padding-bottom:3rem;
+            ul{
+                border-top:1px solid white;
+                padding-top:3rem;
+                a{
+                    font-family: dinfont,sans-serif;
+                }
+            }
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            li{
+                list-style: none;
+                text-align: center;
+                padding-bottom: 3rem;
+                a{
+                    line-height: 1.4;
+                    font-size: 1.8rem;
+                    color:white;
+                }
+            }
+            @include media(tablet) {
+                display: flex;
+            }
+        }
+        &.menu-2{
+            a{
+                line-height: 1.4;
+                font-size: 1.6rem;
+                color:white;
+            }
+        }
+    }
+
+    //desktop
+    @include media(tablet) {
+        flex-direction: row;
+        .site-branding-container{
+            order: 2;
+            margin-right: 3.2rem;
+            margin-left: 3.2rem;
+        }
+        .main-menu{
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            ul{
+                max-width: 100%;
+                margin: 0;
+                margin-right: 3.2rem;
+            }
+            &.menu-1{
+                order: 3;
+                background-color: $inverted-color;
+                padding-top: 0;
+                width: auto;
+                li{
+                    padding:0;
+                    border-right: 1px solid $primary-color;
+                    &:last-child{
+                        border-right: 0;
+                        a{
+                            padding-right: 0;
+                            margin-right: 1.7rem;
+                            color:$secondary-color;
+
+                            &:after{
+                                content: url(./assets/images/cart-colored.svg);
+                                right: -2rem;
+                            }
+                        }
+                    }
+                    a{
+                        color:$primary-color;
+                        padding: 0 3rem;
+                        line-height:1.2;
+                    }
+                }
+            }
+            &.menu-2{
+                order: 1;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                ul{
+                    border-top:0;
+                    border:0;
+                    padding-top: 0;
+                }
+                li{
+                    padding-left:5rem;
+                    padding-bottom: 0;
+                }
+            }
+
+        }
+    }
+    @include media(laptop) {
+        .main-menu{
+            &.menu-1{
+                li{
+                    a{
+                        padding: 0 4rem;
+                    }
+                }
+            }
+        }
+    }
+}

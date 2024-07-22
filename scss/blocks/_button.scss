@@ -1,0 +1,37 @@
+a.button{
+    background-color: $dairlab-color;
+    vertical-align: middle;
+    padding:1rem 2rem;
+    display: inline-block;
+    @include media(desktop) {
+        padding:1.5rem 3rem;
+    }
+    @include button-base;
+}
+.link-button-container{
+    height: fit-content;
+}
+
+.wp-block-buttons{
+    &.is-content-justification-center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a.wp-block-button__link{
+            background-color: $dairlab-color;
+            vertical-align: middle;
+            padding:1rem 2rem;
+            display: inline-block;
+            @include media(desktop) {
+                padding:1.5rem 3rem;
+            }
+            @include button-base;
+        }
+    }
+    &.is-content-justification-center.hide-xs{
+        display: flex;
+        @include media(tablet-portrait) {
+            display: none;
+        }
+    }
+}

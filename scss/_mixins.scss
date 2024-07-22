@@ -1,0 +1,8 @@
+@mixin button-base{
+    color: #fff;
+    background-color: $dairlab-color;
+}
+@mixin button-inverted{
+    color: $dairlab-color;
+    background-color: #fff;
+}

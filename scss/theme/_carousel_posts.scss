@@ -1,0 +1,89 @@
+main .splide__pagination .splide__pagination__page {
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background: $primary-color;
+    border-radius: 0;
+    margin: 10px 5px;
+    padding: 0;
+    transition: transform .2s linear;
+    border: none;
+    opacity: .7;
+}
+main .splide__pagination .splide__pagination__page.is-active {
+    transform: unset !important;
+    background: $secondary-color;
+}
+main .splide__pagination{
+    bottom: 0;
+}
+
+main{
+    overflow: hidden;
+    .latest-posts{
+        .cat-title{
+            font-weight: bold;
+        }
+        .cat-title-post-title{
+            margin-top: 0.5em;
+        }
+        .entry-header{
+            margin-top:3rem
+        }
+        .splide__arrows {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            display: block;
+            left: 0;
+        }
+        .splide__pagination{
+            bottom: 27%;
+            top: auto;
+            @include media(tablet-portrait ) {
+                bottom: -4rem;
+                top: auto;  
+            }
+        }
+        .thumbail{
+            position: relative;
+            width: 100%;
+            padding-top:100%;
+            img{
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                max-width: none;
+                max-height: none;
+                -o-object-fit: cover;
+                object-fit: cover;
+                outline: none;
+                border: none;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+//Set main slider navigation button
+main{
+    //class to add on gutenberg block
+    .main-slider{
+        .splide__pagination{
+            top: calc(73vh - 44px);
+            bottom: auto;
+            @include media(tablet-portrait ) {
+                top: auto;
+                bottom: 0;
+            }
+        }
+    }
+}

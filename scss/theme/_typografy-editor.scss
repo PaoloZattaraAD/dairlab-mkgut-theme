@@ -1,0 +1,82 @@
+body{
+    font-family: dinfont,sans-serif;
+}
+b,strong{font-family: dinmedium,sans-serif; }
+h1,h2,h3,h4,h5{
+    font-weight: normal;
+}
+
+//font-size
+body{
+    font-size: 16px;
+}
+
+p{
+    font-size: 16px;
+    margin-bottom:2em;
+    @include media(tablet-portrait) {
+        font-size: 16px;
+    }
+    @include media(laptop) {
+        font-size: 16px;
+    }
+}
+
+a{
+    font-size: 16px;
+    @include media(tablet-portrait) {
+        font-size: 1.4rem;
+    }
+    @include media(tablet) {
+        font-size: 16px;
+    }
+
+}
+
+h1{
+    font-size: 38px;
+    margin-bottom:1em;
+    margin-top:0;
+    @include media(tablet-portrait) {
+        font-size: 25px;
+    }
+    @include media(tablet-portrait-dairlab) {
+        font-size: 28px;
+    }
+    @include media(tablet) {
+        font-size: 38px;
+    }
+    @include media(laptop) {
+        font-size: 38px;
+    }
+
+}
+h2{
+    font-size: 18px;
+    margin-bottom:1em;
+    margin-top:0;
+    @include media(tablet-portrait) {
+        font-size: 16px;
+    }
+    @include media(tablet) {
+        font-size: 18px;
+    }
+    @include media(laptop) {
+        font-size: 22px;
+    }
+}
+h2.section-title{
+    font-size: 24px;
+    margin-bottom:10px;
+    margin-top:0;
+    margin-bottom: 20px;
+    @include media(tablet-portrait) {
+        font-size: 22px;
+    }
+    @include media(tablet) {
+        font-size: 24px;
+    }
+    @include media(laptop) {
+        font-size: 36px;
+    }
+}

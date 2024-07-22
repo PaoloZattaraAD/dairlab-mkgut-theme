@@ -1,0 +1,45 @@
+.tabs{
+    .wp-block-columns{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+}
+
+.link-tab{
+    opacity: 0.4;
+    position: relative;
+    text-align: center;
+    &.is_selected{
+        opacity: 1;
+    }
+    &:after{
+        content:"";
+        position: absolute;
+        left: calc(50% - 5px);
+        background-color: $secondary-color;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        bottom:-1rem;
+        visibility: hidden;
+    }
+    &.is_selected{
+        opacity: 1;
+        &:after{
+            visibility: visible;
+        }
+    }
+    img{
+        max-width: 80px;
+        margin:0 auto;
+    }
+}
+
+.dropdown-element{
+    display: none;
+    margin-top: 6rem;
+    &.active{
+        display: block;
+    }
+}

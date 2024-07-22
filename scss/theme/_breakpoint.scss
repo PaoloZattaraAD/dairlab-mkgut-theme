@@ -1,0 +1,93 @@
+$default_width: 610px;
+$breakpoint_sm: 768px;
+$breakpoint_ssm: 890px;
+$breakpoint_md: 970px;
+$breakpoint_mmd: 1024px;
+$breakpoint_lg: 1100px;
+$breakpoint_llg: 1200px;
+$breakpoint_xl: 1400px;
+$breakpoint_hd: 1600px;
+$breakpoint_2k: 2100px;
+$breakpoint_4k: 2400px;
+// Responsive breakpoints mixin
+@mixin media( $res ) {
+
+	@if tablet-portrait == $res {
+		@media only screen and (min-width: #{$breakpoint_sm}) {
+			@content;
+		}
+	}
+
+	@if tablet-portrait-dairlab == $res {
+		@media only screen and (min-width: #{$breakpoint_ssm}) {
+			@content;
+		}
+	}
+
+
+	@if tablet == $res {
+		@media only screen and (min-width: #{$breakpoint_md}) {
+			@content;
+		}
+	}
+
+
+	@if tabletdairlab == $res {
+		@media only screen and (min-width: #{$breakpoint_mmd}) {
+			@content;
+		}
+	}
+
+	@if laptop == $res {
+		@media only screen and (min-width: #{$breakpoint_lg}) {
+			@content;
+		}
+	}
+
+
+	@if dairlab == $res {
+		@media only screen and (min-width: #{$breakpoint_llg}) {
+			@content;
+		}
+	}
+
+	@if desktop == $res {
+		@media only screen and (min-width: #{$breakpoint_xl}) {
+			@content;
+		}
+	}
+
+
+	@if desktop-large == $res {
+		@media only screen and (min-width: #{$breakpoint_hd}) {
+			@content;
+		}
+	}
+
+
+	@if desktop-xlarge == $res {
+		@media only screen and (min-width: #{$breakpoint_2k}) {
+			@content;
+		}
+	}
+
+	@if desktop-4k-only == $res {
+		@media only screen and (max-width: #{$breakpoint_4k - 1}) {
+			@content;
+		}
+	}
+
+	@if desktop-4k == $res {
+		@media only screen and (min-width: #{$breakpoint_4k}) {
+			@content;
+		}
+	}
+
+}
+
+
+
+// @include media(tablet-portrait ) {
+
+
+// }
