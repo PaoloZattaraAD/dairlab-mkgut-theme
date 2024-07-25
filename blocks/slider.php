@@ -27,7 +27,7 @@ function my_register_blocks() {
 function mk_slider_callback($block, $content = '', $is_preview = false, $post_id = 0 ){
     
     $id = 'slider-' . $block['id'];
-
+    $className = '';
     // Create class attribute allowing for custom "className" and "align" values.
     
     if( !empty($block['className']) ) {
@@ -52,27 +52,27 @@ function mk_slider_callback($block, $content = '', $is_preview = false, $post_id
             <div class="splide <?php echo $slidetype; ?>">
                 <div class="splide__track">
                     <div class="splide__list">
-                    <?php while( have_rows('mk_slider') ): the_row(); 
+                        <?php while( have_rows('mk_slider') ): the_row(); 
                         $image = get_sub_field('image');
                         ?>
                         <?php if($slidetype != "mk_slider_slideshow_image"){ ?>
-                        <div class="splide__slide">
-                            <div class="content">
-								<?php if(get_sub_field('url_link')){ ?>
-							<a href="<?php echo esc_url(get_sub_field('url_link')); ?>" target="_blank" rel="nofollow"><?php echo wp_get_attachment_image( $image['id'], 'full'); ?></a>
-								<?php }else{ ?>
-                                <?php echo wp_get_attachment_image( $image['id'], 'full'); ?>
-							<?php } ?>
-                                <h4><?php echo get_sub_field('testo'); ?></h4>
-                            </div>
-                        </div>
-                        <?php } else { ?> 
                             <div class="splide__slide">
-                            <?php echo wp_get_attachment_image( $image['id'], 'full'); ?>
-                        </div>
-                        <?php } ?>
-                    <?php endwhile; ?>
-                        </div>
+                                <div class="content">
+                                    <?php if(get_sub_field('url_link')){ ?>
+                                <a href="<?php echo esc_url(get_sub_field('url_link')); ?>" target="_blank" rel="nofollow"><?php echo wp_get_attachment_image( $image['id'], 'full'); ?></a>
+                                    <?php }else{ ?>
+                                    <?php echo wp_get_attachment_image( $image['id'], 'full'); ?>
+                                <?php } ?>
+                                    <h4><?php echo get_sub_field('testo'); ?></h4>
+                                </div>
+                            </div>
+                            <?php } else { ?> 
+                                <div class="splide__slide">
+                                    <?php echo wp_get_attachment_image( $image['id'], 'full'); ?>
+                                </div>
+                            <?php } ?>
+                        <?php endwhile; ?>
+                    </div>
                 </div>
             </div>
         <?php endif; ?>

@@ -4,35 +4,6 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <?php
-    $languages = icl_get_languages();
-    if(!empty($languages)){
-      if($languages["it"]['active']){
-        ?>
-        <script type="text/javascript">
-        var _iub = _iub || [];
-        _iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":true,"countryDetection":true,"enableFadp":true,"enableLgpd":true,"enableUspr":true,"fadpApplies":true,"floatingPreferencesButtonDisplay":"bottom-right","floatingPreferencesButtonIcon":false,"lgpdAppliesGlobally":false,"perPurposeConsent":true,"siteId":3627126,"usprApplies":true,"cookiePolicyId":97128156,"lang":"it","floatingPreferencesButtonCaption":true, "banner":{ "acceptButtonCaptionColor":"#FFFFFF","acceptButtonColor":"#0073CE","acceptButtonDisplay":true,"backgroundColor":"#FFFFFF","closeButtonDisplay":false,"customizeButtonCaptionColor":"#4D4D4D","customizeButtonColor":"#DADADA","customizeButtonDisplay":true,"explicitWithdrawal":true,"listPurposes":true,"logo":null,"ownerName":"dairlab.com","position":"float-bottom-center","rejectButtonCaptionColor":"#FFFFFF","rejectButtonColor":"#0073CE","rejectButtonDisplay":true,"showPurposesToggles":true,"showTitle":false,"showTotalNumberOfProviders":true,"textColor":"#000000" }};
-        </script>
-        <script type="text/javascript" src=https://cs.iubenda.com/autoblocking/3627126.js></script>
-        <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stable/stub.js"></script>
-        <script type="text/javascript" src="//cdn.iubenda.com/cs/stable/iubenda_cs.js" charset="UTF-8" async></script>
-        <?php
-      } else {
-        ?>
-        <script type="text/javascript">
-        var _iub = _iub || [];
-        _iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":true,"countryDetection":true,"enableFadp":true,"enableLgpd":true,"enableUspr":true,"fadpApplies":true,"floatingPreferencesButtonDisplay":"bottom-right","floatingPreferencesButtonIcon":false,"lgpdAppliesGlobally":false,"perPurposeConsent":true,"siteId":3627126,"usprApplies":true,"cookiePolicyId":55879968,"lang":"en-GB","floatingPreferencesButtonCaption":true, "banner":{ "acceptButtonCaptionColor":"#FFFFFF","acceptButtonColor":"#0073CE","acceptButtonDisplay":true,"backgroundColor":"#FFFFFF","closeButtonDisplay":false,"customizeButtonCaptionColor":"#4D4D4D","customizeButtonColor":"#DADADA","customizeButtonDisplay":true,"explicitWithdrawal":true,"listPurposes":true,"logo":null,"ownerName":"dairlab.com","position":"float-bottom-center","rejectButtonCaptionColor":"#FFFFFF","rejectButtonColor":"#0073CE","rejectButtonDisplay":true,"showPurposesToggles":true,"showTitle":false,"showTotalNumberOfProviders":true,"textColor":"#000000" }};
-        </script>
-        <script type="text/javascript" src=https://cs.iubenda.com/autoblocking/3627126.js></script>
-        <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stable/stub.js"></script>
-        <script type="text/javascript" src="//cdn.iubenda.com/cs/stable/iubenda_cs.js" charset="UTF-8" async></script>
-        <?php
-      }
-    }
-    ?>
-        
-    
     <link rel="stylesheet" id="font-css" href="<?php echo get_template_directory_uri( ); ?>/assets/webfontkit/fontkit.css" media="all">
     <link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_template_directory_uri();  ?>/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="<?php echo get_template_directory_uri();  ?>/favicon/apple-icon-60x60.png">
@@ -51,9 +22,8 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri();  ?>/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-	  <meta name="facebook-domain-verification" content="ohdtbd5vp4kdinwasmfrff4hipjo6z" />
-    
-		<!-- Google Tag Manager -->
+	<meta name="facebook-domain-verification" content="ohdtbd5vp4kdinwasmfrff4hipjo6z" />
+			<!-- Google Tag Manager -->
 		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=

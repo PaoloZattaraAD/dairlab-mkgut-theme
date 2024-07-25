@@ -35,4 +35,11 @@
            // transform: scale(3.0);
         }
     }
+
+    .splide__slide img.show-mob {
+        max-width: none;
+        width: auto;
+        height: 340px;
+        position: static;
+    }
 }

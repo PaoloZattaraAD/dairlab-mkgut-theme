@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 add_action('acf/init', 'mkgut_setup_timeline_opt');
 function mkgut_setup_timeline_opt() {
@@ -175,7 +175,7 @@ function mk_gut_widgets_init() {
         array(
             'name'          => esc_html__( 'blog', 'dairlabtm' ),
             'id'            => 'blog',
-            'description'   => esc_html__( 'Add widgets here to appear in your blog.', 'dairlabtm' ),
+            'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'dairlabtm' ),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
             'after_widget'  => '</section>',
             'before_title'  => '<h2 class="widget-title">',
@@ -252,10 +252,10 @@ require get_template_directory() . '/blocks/previewarticolo.php';
 
 
 function wpdocs_excerpt_more( $more ) {
-	if(ICL_LANGUAGE_CODE == 'it'){ 
+	if(ICL_LANGUAGE_CODE == 'it'){
             $readm = "...scopri di più";
-            }else{ 
-			$readm = "...read more";     
+            }else{
+			$readm = "...read more";
             }
     return '  <a href="'.get_the_permalink().'">'.$readm.'</a>';
 }
@@ -266,5 +266,80 @@ function wpdocs_custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
+
+// add new post type
+
+require get_template_directory() . '/inc/c-posts.php';
+
 require get_template_directory() . '/inc/blocks.php';
+
 add_filter('wpcf7_autop_or_not', '__return_false');
+
+
+
+function modify_h1_tags_and_reduce_nesting($content) {
+    // Array di tag da ridurre la nidificazione
+    $tags_to_reduce = ['strong', 'em', 'b', 'i']; // Puoi aggiungere altri tag qui
+
+    // Verifica se siamo in un contesto di singolo post/pagina
+    if (is_singular() && in_the_loop() && is_main_query()) {
+        // Utilizziamo DOMDocument per manipolare l'HTML
+        $dom = new DOMDocument();
+
+        // Preserva gli spazi bianchi
+        $dom->preserveWhiteSpace = true;
+
+        // Aggiungi un wrapper temporaneo per gestire correttamente i frammenti HTML
+        $wrapped_content = '<div id="temp-wrapper">' . $content . '</div>';
+
+        // Carica l'HTML, gestendo i potenziali errori
+        @$dom->loadHTML(mb_convert_encoding($wrapped_content, 'HTML-ENTITIES', 'UTF-8'), LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+
+        $xpath = new DOMXPath($dom);
+
+        // Gestisci gli h1
+        $h1_tags = $xpath->query('//h1');
+        $first_h1 = true;
+        foreach ($h1_tags as $h1) {
+            if ($first_h1) {
+                $first_h1 = false;
+                continue;
+            }
+            $h2 = $dom->createElement('h2');
+            while ($h1->childNodes->length > 0) {
+                $h2->appendChild($h1->childNodes->item(0));
+            }
+            foreach ($h1->attributes as $attribute) {
+                $h2->setAttribute($attribute->name, $attribute->value);
+            }
+            $classes = $h2->getAttribute('class');
+            $h2->setAttribute('class', trim($classes . ' h1'));
+            $h1->parentNode->replaceChild($h2, $h1);
+        }
+
+        // Riduci la nidificazione dei tag specificati
+        foreach ($tags_to_reduce as $tag) {
+            $elements = $xpath->query('//' . $tag . '/' . $tag);
+            for ($i = $elements->length - 1; $i >= 0; $i--) {
+                $element = $elements->item($i);
+                $parent = $element->parentNode;
+                while ($element->firstChild) {
+                    $parent->appendChild($element->firstChild);
+                }
+                $parent->removeChild($element);
+            }
+        }
+
+        // Estrai il contenuto dal wrapper temporaneo
+        $wrapper = $dom->getElementById('temp-wrapper');
+        $modified_content = '';
+        foreach ($wrapper->childNodes as $child) {
+            $modified_content .= $dom->saveHTML($child);
+        }
+
+        return $modified_content;
+    }
+
+    return $content;
+}
+add_filter('the_content', 'modify_h1_tags_and_reduce_nesting', 10);

@@ -1,0 +1,303 @@
+@mixin spacing{
+    max-width: 1440px;
+    padding: 0 1.6rem;
+    margin-inline: auto;
+}
+
+@mixin maxwidth{
+    @include media(tablet-portrait){
+        max-width: calc(100% - 60px);
+    }
+    @include media(desktop-large){
+        max-width: 1440px;  
+    }
+}
+
+@mixin calcfont($font){
+    font-size: $font;
+    @include media(tablet-portrait){
+        font-size: calc( $font * 1.2);  
+    }
+    @include media(tabletdairlab){
+        font-size: calc( $font * 1.4);  
+    }
+    @include media(desktop){
+        font-size: calc( $font * 1.6);  
+    }
+    @include media(desktop-large){
+        font-size: calc( $font * 2);  
+    }
+    @include media(desktop-xlarge){
+        font-size: calc( $font * 2.4);  
+    }
+}
+
+@import '../scss/theme/breakpoint';
+@import 'base';
+@import 'land_header';
+@import 'form';
+@import 'footer';
+
+
+// body{
+//     padding-top: 0 !important;
+//     :where(.wp-block-columns.has-background){
+//         padding: 1.5rem;
+//     }
+//     @media only screen and (max-width: 768px) {
+//         .wp-block-columns .wp-block-column.has-text {
+//             padding-bottom: 4rem;
+//             .wp-block-buttons{
+//                 justify-content: center;
+//             }
+//         }
+//         #concept{
+//             margin-bottom: 2rem;
+//         }
+//     }
+// }
+// .landing-header{
+//     background-color: black;
+//     width: 100%;
+//     padding: 30px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     .logo{
+//         height: 30px;
+//         width: auto;
+//     }
+// }
+// .din-margin{
+//     margin:0 !important;
+//     @media only screen and (min-width: 768px) {
+//         padding-left: 0;
+//     }
+// }
+// .p-160{
+//     padding: 160px 0;
+// }
+// .mobile-reverse{
+
+//     @media only screen and (max-width: 768px) {
+//         padding-top: 60px;
+//     }
+//     &.din-margin{
+//         margin-right: 0;
+//     }
+// }
+// .form_landing{
+//     background-color: #fff;
+//     .form_heading{
+//         color:#009FE2;
+//         @media only screen and (min-width: 960px) {
+//         display: flex;
+//         justify-content: space-between;
+//         gap:40px;
+//         }
+//         width: 100%;
+//         @include spacing;
+//         margin-bottom: 4rem;
+//         .form-title{
+//             font-size: 38px;
+//             text-align: center;
+//             padding-top: 2rem;
+//             margin-bottom: 2rem;
+//             @media only screen and (min-width: 960px) {
+//                 padding-top: 0;
+//                 font-size: 40px;
+//                 text-align: left;
+//                 margin-bottom: 0;
+//             }
+//             @media only screen and (min-width: 1240px) {
+//             font-size: 60px;
+//             }
+//             font-weight: bold;
+//         }
+//         .form-subtitle{
+//             font-size: 24px;
+//             font-weight: bold;
+//             text-align: center;
+//             @media only screen and (min-width: 1100px) {
+//                 font-size: 40px;
+//                 text-align: left;
+//               }
+//         }
+//     }
+//     .field_rows,.content_area,.footer_form{
+//         width: 100%;
+//     }
+//     .form_input_wrapper{
+//         max-width: 970px;
+//         margin-inline:auto;
+//     }
+//     .field_rows{
+//         grid-template-columns: repeat(2, 1fr);
+//         display: grid;
+//         gap:20px;
+//         margin-bottom: 20px;
+//     }
+//     .footer_form{
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         margin-top: 20px;
+//     }
+// }
+// body{
+//     .wpcf7{
+//         padding: 2rem 3rem;
+//         padding-bottom: 60px;
+//         @media only screen and (min-width: 768px) {
+//             padding: 40px 0;
+//         }
+//         @media only screen and (min-width: 1100px) {
+//             padding: 100px 0;
+//         }
+//         @media only screen and (min-width: 1440px) {
+//             padding: 140px 0;
+//         }
+//         margin: 0;
+//         background-color: #fff;
+//     }
+// }
+// .wp-block-columns{
+//     @media only screen and (min-width: 768px) {
+//         padding: 40px 0;
+//     }
+//     @media only screen and (min-width: 1100px) {
+//     padding: 100px 0;
+//     }
+//     @media only screen and (min-width: 1440px) {
+//         padding: 140px 0;
+//     }
+// }
+// .wp-block-group{
+//     @media only screen and (min-width: 768px) {
+//         padding: 40px 0;
+//     }
+//     @media only screen and (min-width: 1100px) {
+//     padding: 100px 0;
+//     }
+//     @media only screen and (min-width: 1440px) {
+//         padding: 140px 0;
+//     }
+//     .wp-block-columns{
+//         max-width: 1440px;
+//         margin-inline: auto;
+//         @media only screen and (min-width: 960px) {
+//             padding: 30px;
+//         }
+//     }
+//     .no-padding{
+//         padding: 0 !important;
+//         h2{
+//             font-size: 38px;
+//             text-align: center;
+//             padding-top: 2rem;
+//             @media only screen and (min-width: 960px) {
+//                 padding-top: 0;
+//                 font-size: 40px;
+//                 text-align: left;
+//             }
+//             @media only screen and (min-width: 1240px) {
+//             font-size: 60px;
+//             }
+//             font-weight: bold;
+//             max-width: 550px;
+//         }
+//     }
+//     .container{
+//         max-width: 1440px;
+//         margin-inline: auto;
+//     }
+//     &.square_style{
+//         gap:0;
+//         &.is-layout-flex{
+//             display: block;
+//             @media only screen and (min-width: 768px) {
+//                 display: flex;
+//             }
+//         }
+//         .wp-block-cover{
+//             width: 100%;
+//             @media only screen and (min-width: 768px) {
+//                 width: 50%;
+//             }
+//             .wp-block-group__inner-container > *{
+//                 padding: 0;
+//                 margin-bottom: 1rem;
+//             }
+//             .wp-block-group{
+//                 .is-layout-flex{
+//                     display: flex !important;
+//                 }
+//             }
+//         }
+//     }
+//     &.no-padding{
+//         padding: 0;
+//     }
+// }
+
+// .wp-block-cover__inner-container{
+//     .wp-block-group{
+//         img{
+//             max-width: fit-content;
+//         }
+//     }
+// }
+// body{
+//     .footer-helper-link{
+//         padding-top: 3rem;
+//         padding-bottom: 3rem;
+//         @media only screen and (min-width: 768px) {
+
+//         }
+//         .site-name{
+//             margin: 0;
+//             align-self: center;
+//             svg{
+//                 margin-inline: auto;
+//             }
+//             @media only screen and (min-width: 768px) {
+//                 svg{
+//                     margin: 0;  
+//                 }
+//             }
+//         }
+//         .social-network{
+//             margin: 0;
+//         }
+//     }
+//     .landing_menu{
+//         list-style: none;
+//         padding: 0;
+//         @media only screen and (min-width: 768px) {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         }
+//         margin-bottom:3rem;
+//         @media only screen and (min-width: 768px) {
+//             margin: 0;
+//             padding:0;
+//             gap:20px;
+//         }
+//         li{
+//             margin-top: 1rem;
+//             text-align: center;
+//             @media only screen and (min-width: 768px) {
+//             margin:0;
+//             padding: 0;
+//             }
+//             a{
+//                 color:#fff !important;
+//             }
+//             a:hover{
+//                 text-decoration: underline;
+//                 color: currentColor;
+//             }
+//         }
+//     }
+// }

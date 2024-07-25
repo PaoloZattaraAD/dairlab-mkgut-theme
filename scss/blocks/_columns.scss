@@ -39,7 +39,8 @@
             p{
                 margin:0;
             }
-            h1{
+            h1,
+            .h1{
                 font-size: 7.8rem;
                 margin-bottom: 3rem;
                 @include media(laptop) {
@@ -60,37 +61,18 @@
             padding:0;
         }
         &.has-text{
-            h1{
-                margin-bottom: 3rem;
-                margin-top:3rem;
-            }
-            h2{
-                margin-top: 3rem;
-                text-align: center;
-                margin-bottom: 2rem;
-            }
+            display: grid;
+            align-content: center;
+            gap: 1.5rem;
+
             p{
-                margin-bottom: 1.6rem;
                 max-width: 620px;
             }
-            padding-bottom: 8rem;
+
             @include media(tablet-portrait) {
-                display: grid;
-                align-content: space-between;
                 text-align: unset;
                 padding: 1.5rem 4rem;
-                h1{
-                    margin-bottom: 0;
-                    margin-top:0;
-                }
-                h2{
-                    margin-top: 0;
-                    text-align: unset;
-                    margin-bottom: 0;
-                }
-                p{
-                    margin-bottom: 0;
-                }
+
             }
             @include media(tablet) {
                 padding:3.8rem 6rem;
@@ -100,6 +82,7 @@
             }
             @include media(desktop-large) {
                 padding:6rem 12rem;
+                gap: 2rem;
             }
             @include media(desktop-xlarge) {
                 padding:8.4rem 16.8rem;

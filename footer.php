@@ -24,20 +24,7 @@
 		<hr>
 		<section class="site-info">
 			<div class="site-credits">
-				<p style="font-size=12px;">
-			D-Air Lab Srl &copy;<?= date('Y') ?> <br>
-			<?php
-			if(!empty($languages)){
-				if($languages["it"]['active']){ ?>
-					nr REA VI-365477, reg. impr 03926100243, cap. soc. int. vers. 2.053.400,00€, Società soggetta ad attività di direzione e coordinamento da parte di DL 72 S.r.l.
-					<?php
-				} else { ?>
-					Fully paid-up share capital 2.053.400,00€, Company subject to management and coordination by DL 72 S.r.l.
-					<?php
-				}
-			} ?>
-
-				</p>
+					<p>D-Air Lab Srl ©2021 | P.IVA 03926100243</p>
 			</div><!-- .site-name -->
 			<div class="site-lang">
 				<ul>

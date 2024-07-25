@@ -3,6 +3,7 @@
     "orderby" => 'date',
     "posts_per_page" => '6',
 ));
+$categorytitle = "";
 if($myquery->have_posts(  )): ?>
     <section id="latest-posts" class="latest-posts din-margin">
         <h2 class="has-text-align-center alignwide section-title">D-AIR LAB <strong>HIGHLIGHTS</strong></h2>

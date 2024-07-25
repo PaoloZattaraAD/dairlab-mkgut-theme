@@ -42,7 +42,7 @@ main{
             top: auto;
             @include media(tablet-portrait ) {
                 bottom: -4rem;
-                top: auto;  
+                top: auto;
             }
         }
         .thumbail{
@@ -78,9 +78,10 @@ main{
     //class to add on gutenberg block
     .main-slider{
         .splide__pagination{
-            top: calc(73vh - 44px);
+            top: calc(316px);
             bottom: auto;
             @include media(tablet-portrait ) {
+                top: calc(73vh - 44px);
                 top: auto;
                 bottom: 0;
             }

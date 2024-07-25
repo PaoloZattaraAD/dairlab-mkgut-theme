@@ -30,6 +30,8 @@ function mk_preview_articolo_callback($block, $content = '', $is_preview = false
 
         // Create class attribute allowing for custom "className" and "align" values.
 
+        $className = '';
+
         if( !empty($block['className']) ) {
             $className .= ' ' . $block['className'];
         }

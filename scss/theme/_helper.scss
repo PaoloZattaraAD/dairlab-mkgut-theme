@@ -17,3 +17,17 @@
         min-height: 560px;
     }
 }
+
+.show-desk {
+  display: none !important;
+}
+
+@include media(tablet-portrait ) {
+    .show-desk {
+        display: block !important;
+    }
+
+    .show-mob {
+      display: none !important;
+    }
+}

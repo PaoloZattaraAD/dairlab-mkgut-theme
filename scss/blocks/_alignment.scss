@@ -1,5 +1,6 @@
 main{
     h1,
+    .h1
     p{
         text-align: center;
         @include media(tablet-portrait) {
@@ -18,7 +19,7 @@ main{
                 margin-right: 0 !important;
                 margin-left:auto!important;
             }
-        }  
+        }
     }
     .has-text-align-center{
         text-align: center;
