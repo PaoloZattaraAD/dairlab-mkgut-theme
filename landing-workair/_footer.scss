@@ -1,61 +1,82 @@
-.footer-helper-link{
-            padding-top: 3rem;
-            padding-bottom: 3rem;
-            @media only screen and (min-width: 768px) {
-    
-            }
-            .site-name{
-                margin: 0;
-                align-self: center;
-                svg{
-                    margin-inline: auto;
-                }
-                @media only screen and (min-width: 768px) {
-                    svg{
-                        margin: 0;  
-                    }
-                }
-            }
-            .social-network{
-                margin: 0;
-            }
-        }
-        .landing_menu{
-            min-width: fit-content;
-            list-style: none;
-            padding: 0;
-            @media only screen and (min-width: 768px) {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            }
-            margin-bottom:3rem;
-            @media only screen and (min-width: 768px) {
-                margin: 0;
-                padding:0;
-                gap:20px;
-            }
-            li{
-                margin-top: 1rem;
-                text-align: center;
-                @media only screen and (min-width: 768px) {
-                margin:0;
-                padding: 0;
-                }
-                a{
-                    color:#fff !important;
-                }
-                a:hover{
-                    text-decoration: underline;
-                    color: currentColor;
-                }
-            }
-        }
+body.landing-workair footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 55px;
+  background-color: $light-gray;
+  color: #000;
+  flex-wrap: wrap;
+  gap: 20px 0;
 
-        body.landing_page footer *{
-            text-align: center;
-            @media only screen and (min-width: 768px) {
-                text-align: right;
+  margin-top: 120px;
 
-            }
-        }
+  @include mediadown(desktop) {
+    margin-top: 10vw;
+  }
+
+  @include mediadown(tablet-portrait) {
+    margin-top: 17vmax;
+  }
+
+  @include mediadown(tablet-portrait-dairlab) {
+    flex-direction: column !important;
+
+    .footer-logo-ruler{
+      display: none;
+    }
+  }
+
+  .footer-logo,
+  .footer-logo-ruler{
+    width: 100px;
+
+    svg{
+      width: 100%;
+    }
+  }
+  .footer-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    gap: 10px;
+
+    .adress{
+      font-weight: bold;
+    }
+    .info{
+      font-size: 12px;
+    }
+  }
+  .footer-logo-ruler{
+    opacity: 0;
+  }
+}
+
+
+// breackpoints
+//
+// @include media(tablet-portrait) {
+// }
+// @include media(tablet-portrait-dairlab) {
+// }
+// @include media(tablet) {
+// }
+// @include media(tabletdairlab) {
+// }
+// @include media(laptop) {
+// }
+// @include media(dairlab) {
+// }
+// @include media(desktop) {
+// }
+// @include media(desktop-large) {
+// }
+// @include media(desktop-xlarge) {
+// }
+// @include media(desktop-4k-only) {
+// }
+// @include media(desktop-4k) {
+// }

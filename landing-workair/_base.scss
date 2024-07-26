@@ -1,193 +1,253 @@
-body.landing_page{
-    /* reset  base on standard page */
-    :where(.wp-block-columns.has-background) {
-        padding: 0
+body.landing-workair {
+  padding-top: 10px;
+
+  h1,
+  h2.h1{
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 40px;
+
+    @include mediadown(tablet-portrait) {
+      margin-bottom: 10px;
     }
-    padding-top: 0 ;
-    /* FONTS */
-    * {
-        text-align: left;
+  }
+
+  h2,
+  .wp-block-button__link{
+    text-transform: uppercase;
+  }
+
+
+  main#main{
+    display: flex;
+    flex-direction: column;
+    gap: 120px 0;
+
+    @include mediadown(desktop) {
+      gap: 10vw 0;
     }
-    h1,h2,h3,h4,h5,h6{
-        font-weight: bold;
+
+    @include mediadown(tablet-portrait) {
+      gap: 17vmax 0;
     }
-    h1{
-        font-size: 3.8rem;
-    }   
-    h2{
-        font-size: 2.4rem;
-        @include media(desktop){
-                font-size: 40px;
-        }
+
+    > .wp-block-columns,
+    > .wp-block-group,
+    .land-dxsx
+    .land-whenprotect,
+    .land-specifics,
+    .land-models,
+    .land-reference,
+    .land-info{
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
     }
-    h3{
-        font-size: 20px;
-        @include media(desktop){
-            font-size: 25px;
-        }
+
+    // .land-dxsx,
+    .land-specifics,
+    .land-models,
+    .land-reference,
+    .land-info{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      // max-width: 1340px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+
     }
-    #main > div{
-        margin-top: 0;
+  }
+
+
+  .jumbo {
+    // padding-bottom: 30px !important;
+
+    .image_block{
+      img{
+        position: relative;
+      }
+    }
+    .block-container {
+      position: relative;
+      padding: 3rem 1.6rem;
+      max-width: 100%;
+      text-align: center;
+
+      @include mediadown(tablet-portrait) {
+        padding-bottom: 0;
+      }
+
+      > *:last-child{
         margin-bottom: 0;
-       &:not(.full_img_blocks,.square_style){
-        padding:6rem 0;
-        @include media(desktop){
-            padding:8rem 0;
+      }
+
+      // h1{
+      //   margin-bottom: 40px;
+      //
+      //   @include mediadown(tablet-portrait) {
+      //     margin-bottom: 10px;
+      //   }
+      // }
+      h2{
+        margin-bottom: 30px;
+
+        @include mediadown(tablet-portrait) {
+          margin-bottom: 20px;
         }
-       }
+      }
+      p{
+        margin-top: 0;
+      }
+
+      @include media(tablet-portrait) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 50%;
+        margin-left: auto;
+        padding: 4rem;
+        line-height: 1.2;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: center;
+        text-align: left;
+
+        > *{
+          max-width: 400px;
+        }
+      }
+      @include media(tablet) {
+        padding: 6rem;
+        padding-left: 12rem;
+      }
+      @include media(laptop) {
+        padding: 8rem;
+        padding-left: 15rem;
+      }
+      @include media(desktop) {
+        padding: 10rem;
+        padding-left: 18rem;
+      }
+      @include media(desktop-large) {
+        padding: 12rem;
+        padding-left: 25rem;
+      }
+      @include media(desktop-xlarge) {
+        padding: 16.8rem 25rem;
+      }
     }
-    /* spacing  16px margin mobile */
+  }
 
-    /* breakpoint mobile 768px */
 
-    /* rewrite base BB style */
-    .full_img_blocks{
-        min-height: calc(100dvh - 64px);
-        @include media(tablet-portrait){
-            min-height: calc(100dvh - 90px);   
+  .land-whenprotect{
+    .wp-block-column{
+      > *{
+        max-width: 810px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      h2{
+        @include mediadown(tablet-portrait) {
+          margin-bottom: 30px;
         }
-        .text_area{
-        align-items: flex-end;
-        box-sizing: border-box;
-        @media screen and (min-width:768px) {
-            padding: 0 3%;
-            box-sizing: border-box;
+      }
+
+      @include mediadown(tablet) {
+        .wp-block-columns{
+          margin-top: 30px;
+          margin-bottom: 0;
+          gap: 0;
+          text-align: center;
+
+          p{
+            margin-top: 0;
+          }
         }
-            .content{
-                padding-bottom: 20%;
-                margin-left: 0;
-                @include media(tablet-portrait){
-                    padding-left: 0;
-                    padding-bottom: 20%;
-                }
-                h1{
-                    line-height: 1.2;
-                    @include calcfont(3.8rem);
-                }
-                h2{
-                    text-align: left;
-                    margin-bottom: 1.6rem;
-                    @include calcfont(1.4rem);
-                }
-                h1,h2{
-                    @media screen and (min-width:768px) {
-                        max-width:560px; 
-                    }
-                    @media screen and (min-width:1280px) {
-                        max-width:680px; 
-                    }
-                    @include media(desktop-large){
-                        max-width:1000px; 
-                        padding-left: calc((100% - 1440px) / 2);  
-                    }
-                }
-            } 
-        } 
+      }
     }
+  }
 
-    .image-text,.mobile-reverse{
-        .wp-block-button{
-            margin-top:4rem !important
-        }
-        @include media(tablet-portrait){
-            h2{
-                margin-bottom: 2rem !important;
-            }
-        }
-        @include media(desktop){
-            h2{
-                margin-bottom: 3rem !important;
-            }
-        }
-        &.wp-block-columns .wp-block-column.has-text{
-            padding-bottom: 0 !important;
-            padding-top: 0 !important;
-        }
-    }
-
-    .columns_content{
-        .wp-block-group__inner-container{
-            h2.wp-block-heading{
-                font-size: 32px;
-                padding: 0 1.6rem;
-                @media screen and (min-width:768px) {
-                    padding: 0 3%;
-                    box-sizing: border-box;
-                }
-                @include media(desktop){
-                    font-size: 60px;
-                }
-            }
-            .wp-block-columns{
-                padding: 0;
-                box-sizing: border-box;
-                max-width: 94%;
-                margin-inline: auto;
-                background-color: transparent !important;
-                .wp-block-column{
-                    padding: 1.6rem;
-                    box-sizing: border-box;
-                    background-color: #fff;
-                }
-                @include media(tablet-portrait){
-                    display:flex;
-                    flex-wrap: wrap !important;
-                    background-color: #fff !important;
-                    .wp-block-column{
-                        flex-basis: calc(50% - 1.6rem) !important;
-                        min-width: calc(50% -  1.6rem);
-                    }
-                }
-                @include media(desktop){
-                    display:grid;
-                    gap: 3rem;
-                    padding: 3rem;
-                    .wp-block-column{
-                        min-width: 100%;
-                        padding: 0;
-                    }
-                }
-                @include media(desktop-large){
-                    max-width: 1440px;
-                    display:grid;
-                    .wp-block-column{
-                        min-width: 100%;
-                    }
-                }
-            }
-        }
+  .land-specifics{
+    .wp-block-video{
+      margin-top: 80px;
+      margin-bottom: 50px;
     }
 
+    .land-specs-text{
+      figure{
+        width: 110px;
 
-    .square_style{
-        gap:0;
-        &.is-layout-flex{
-            display: block;
-            @media only screen and (min-width: 768px) {
-                display: flex;
-            }
+        img{
+          width: 100%;
         }
-        .wp-block-cover{
-            width: 100%;
-            position: relative;
-            @media only screen and (min-width: 768px) {
-                width: 50%;
-            }
-            .wp-block-group__inner-container > *{
-                padding: 0;
-                margin-bottom: 1rem;
-            }
-            .wp-block-group{
-                .wp-block-group__inner-container{
-                    position: absolute;
-                    height: 240px;
-                    bottom: 0;
-                }
-                .is-layout-flex{
-                    display: flex !important;
-                }
-            }
-        }
+      }
+      p{
+        margin-top: 0;
+      }
+    }
+  }
+
+  .land-reference{
+    .wp-block-heading{
+      @extend .h1;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .land-models{
+    h2:not(.h1){
+      margin-bottom: 0;
     }
 
+    .wp-block-columns{
+      > .wp-block-column{
+        > .wp-block-group{
+          padding-left: 0;
+          padding-right: 0;
+          padding-top: 0;
+          padding-bottom: 0;
+
+          > figure{
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+
+            img{
+              width: 100%;
+            }
+          }
+        }
+
+        h3{
+          font-weight: 900;
+          margin-top: 0;
+        }
+        // p{
+        //   margin-bottom: 0;
+        // }
+      }
+    }
+  }
+
+  .land-reference{
+    .mk_slider_carousel_wide{
+      margin-bottom: 0;
+
+      img{
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
 }

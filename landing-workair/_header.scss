@@ -1,0 +1,45 @@
+body.landing-workair header{
+  nav.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 28px 38px;
+    flex-wrap: wrap;
+
+    .logo{
+      color: $dairlab-color;
+      font-size: 50px;
+      font-weight: 900;
+      line-height: 42px;
+      transform: translateY(-4px);
+    }
+    .land-menu{
+      display: none;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 35px;
+
+      @include media(laptop) {
+        display: flex;
+      }
+
+      @include media(desktop) {
+        gap: 70px;
+      }
+
+      a{
+        color: $dark-gray;
+        font-size: 19.5px;
+        text-transform: uppercase;
+      }
+    }
+    a.header-cta{
+      text-transform: uppercase;
+      border-radius: 0;
+    }
+  }
+}

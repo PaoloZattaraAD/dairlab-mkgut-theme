@@ -1,0 +1,86 @@
+{
+    "key": "group_66a1c3bf622c7",
+    "title": "Landing Workair",
+    "fields": [
+        {
+            "key": "field_66a1c3bff611e",
+            "label": "Header menu",
+            "name": "header_menu",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "75",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Aggiungi Riga",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_66a1c470f611f",
+                    "label": "elemento",
+                    "name": "elemento",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "return_format": "array",
+                    "parent_repeater": "field_66a1c3bff611e"
+                }
+            ]
+        },
+        {
+            "key": "field_66a1c4a8f6120",
+            "label": "Header CTA",
+            "name": "header_cta",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "landing-workair.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfml_field_group_mode": "translation",
+    "modified": 1721878764
+}

@@ -4,5 +4,9 @@ wp_enqueue_style('landing_css', get_template_directory_uri(  ).'/landing-workair
 
 get_header('landing-workair');
 ?>
-<?php the_content(); ?>
+
+<?php while(have_posts(  )): the_post(); ?>
+  <?php the_content(); ?>
+<?php endwhile; ?>
+
 <?php get_footer('landing-workair'); ?>

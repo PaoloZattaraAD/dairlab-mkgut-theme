@@ -87,6 +87,76 @@ $breakpoint_4k: 2400px;
 
 
 
+@mixin mediadown( $res ) {
+
+	@if tablet-portrait == $res {
+		@media only screen and (max-width: #{$breakpoint_sm}) {
+			@content;
+		}
+	}
+
+	@if tablet-portrait-dairlab == $res {
+		@media only screen and (max-width: #{$breakpoint_ssm}) {
+			@content;
+		}
+	}
+
+
+	@if tablet == $res {
+		@media only screen and (max-width: #{$breakpoint_md}) {
+			@content;
+		}
+	}
+
+
+	@if tabletdairlab == $res {
+		@media only screen and (max-width: #{$breakpoint_mmd}) {
+			@content;
+		}
+	}
+
+	@if laptop == $res {
+		@media only screen and (max-width: #{$breakpoint_lg}) {
+			@content;
+		}
+	}
+
+
+	@if dairlab == $res {
+		@media only screen and (max-width: #{$breakpoint_llg}) {
+			@content;
+		}
+	}
+
+	@if desktop == $res {
+		@media only screen and (max-width: #{$breakpoint_xl}) {
+			@content;
+		}
+	}
+
+
+	@if desktop-large == $res {
+		@media only screen and (max-width: #{$breakpoint_hd}) {
+			@content;
+		}
+	}
+
+
+	@if desktop-xlarge == $res {
+		@media only screen and (max-width: #{$breakpoint_2k}) {
+			@content;
+		}
+	}
+
+	@if desktop-4k == $res {
+		@media only screen and (max-width: #{$breakpoint_4k}) {
+			@content;
+		}
+	}
+
+}
+
+
 // @include media(tablet-portrait ) {
 
 
